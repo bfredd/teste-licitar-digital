@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  nestjs-app:
+    image: node:latest
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run start:dev"
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: licitacao_digital
+      MYSQL_USER: licitacao
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3306:3306"
