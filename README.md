@@ -20,9 +20,7 @@ localhost:3000
 Documentação API: 
 localhost:3000/api
 
-## Considerações Finais
-
-
 ## Autor
 
+Obrigado!
 Bruno Trindade
